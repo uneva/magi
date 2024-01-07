@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package errors.v1;
+
+import "google/protobuf/descriptor.proto";
+
+option go_package = "github.com/uneva/magi/errors/v1;v1";
+
+message Status {
+  int32 code = 1;
+  string reason = 2;
+  string message = 3;
+  map<string, string> metadata = 4;
+}
