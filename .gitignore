@@ -34,3 +34,4 @@ buf.lock
 # Other operating system files
 .DS_Store
 .vscode/
+example/*
