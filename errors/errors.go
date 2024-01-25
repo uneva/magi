@@ -75,6 +75,13 @@ func Reason(err error) string {
 	return FromError(err).Reason
 }
 
+func Text(err error) string {
+	if err == nil {
+		return UnknownReason
+	}
+	return http.StatusText(Code(err))
+}
+
 func Clone(err *Error) *Error {
 	if err == nil {
 		return nil
