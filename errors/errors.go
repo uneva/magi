@@ -18,6 +18,7 @@ type Error struct {
 	cause error
 }
 
+// Error implements the error interface.ß
 func (e *Error) Error() string {
 	return fmt.Sprintf("error: code = %d reason = %s message = %s metadata = %v cause = %v", e.Code, e.Reason, e.Message, e.Metadata, e.cause)
 }
